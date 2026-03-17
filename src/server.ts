@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import { sinaisRouter } from "./modules/patients/routes/sinais.routes.js";
-import { AppDataSource } from "./data-source.js"; // Importe o seu DataSource
+import { AppDataSource } from "./data-source.js"; 
 
 const app = express();
 
@@ -18,11 +18,11 @@ AppDataSource.initialize()
         
         const PORT = 3001;
         app.listen(PORT, () => {
-            console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
+            console.log(`Servidor rodando em http://localhost:${PORT}`);
         });
     })
     .catch((error) => {
-        console.error("❌ Erro ao conectar no Banco de Dados:", error);
+        console.error("Erro ao conectar no Banco de Dados:", error);
     });
 
 
