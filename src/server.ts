@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import { sinaisRouter } from "./modules/patients/routes/sinais.routes.js";
-import { AppDataSource } from "./data-source.js"; 
+import { AppDataSource } from "./database/data-source.js"; 
 
 const app = express();
 

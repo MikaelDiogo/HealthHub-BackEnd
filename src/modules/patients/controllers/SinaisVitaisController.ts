@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { AppDataSource } from "../../../data-source.js";
+import { AppDataSource } from "../../../database/data-source.js";
 import { SinaisVitais } from "../entities/SinaisVitais.js";
 
 export class SinaisVitaisController {

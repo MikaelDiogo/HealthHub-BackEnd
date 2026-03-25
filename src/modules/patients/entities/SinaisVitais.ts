@@ -22,4 +22,5 @@ export class SinaisVitais {
 
     @CreateDateColumn()
     created_at!: Date;
+    paciente: any;
 }

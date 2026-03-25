@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import fs from 'fs';
 import path from 'path';
-import { AppDataSource } from '../src/data-source.js';
+import { AppDataSource } from '../src/database/data-source.js';
 import { SinaisVitais } from '../src/modules/patients/entities/SinaisVitais.js';
 
 async function importar() {
