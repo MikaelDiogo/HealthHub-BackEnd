@@ -2,7 +2,7 @@ import "reflect-metadata";
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
-import { sinaisRouter } from "./modules/patients/routes/sinais.routes.js";
+import { routes } from "./shared/infra/http/routes/index.js";
 import { AppDataSource } from "./database/data-source.js"; 
 
 const app = express();
@@ -24,7 +24,6 @@ AppDataSource.initialize()
     .catch((error) => {
         console.error("Erro ao conectar no Banco de Dados:", error);
     });
-
 
 app.post('/login', (req: Request, res: Response) => {
     const { email, password } = req.body;
@@ -50,4 +49,4 @@ app.post('/login', (req: Request, res: Response) => {
     });
 });
 
-app.use('/patients', sinaisRouter);
+app.use(routes);

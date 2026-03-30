@@ -3,7 +3,7 @@ import { MigrationInterface, QueryRunner, Table, TableColumn, TableForeignKey } 
 export class UpdateSinaisVitaisAddPressaoEPaciente1774448538633 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        // 1. Criar a tabela de pacientes primeiro
+        
         await queryRunner.createTable(new Table({
             name: "pacientes",
             columns: [
